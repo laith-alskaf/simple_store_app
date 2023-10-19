@@ -1,0 +1,1 @@
+enum DataType { INT, DOUBLE, STRING, BOOL,LISTSTRING}
