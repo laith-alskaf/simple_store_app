@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/extenssions/extenssions.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/extenssions/extenssions.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
 
 class CustomPrice extends StatelessWidget {
   const CustomPrice(

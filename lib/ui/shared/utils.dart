@@ -1,7 +1,7 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
 import 'package:get/get.dart';
 
 //~  --- Width , Height for Screen-Size  ---

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/core/utilis/general_util.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_button.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_price.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/extenssions/extenssions.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
-import 'package:store_challenge/ui/views/main_view/cart_view/cart_view_controller.dart';
-import 'package:store_challenge/ui/views/main_view/cart_view/custom_cart.dart';
-import 'package:store_challenge/ui/views/main_view/checkout_view/checkout_view.dart';
+import 'package:LaithStore/core/utilis/general_util.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_button.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_price.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/extenssions/extenssions.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
+import 'package:LaithStore/ui/views/main_view/cart_view/cart_view_controller.dart';
+import 'package:LaithStore/ui/views/main_view/cart_view/custom_cart.dart';
+import 'package:LaithStore/ui/views/main_view/checkout_view/checkout_view.dart';
 
 class CartView extends StatefulWidget {
   const CartView({super.key});

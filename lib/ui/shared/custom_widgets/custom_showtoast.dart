@@ -1,10 +1,10 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:store_challenge/core/enums/message_type.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
+import 'package:LaithStore/core/enums/message_type.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
 
 class CustomShowToast {
   static showMessage(

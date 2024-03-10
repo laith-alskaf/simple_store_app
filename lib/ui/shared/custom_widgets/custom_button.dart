@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({

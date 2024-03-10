@@ -1,4 +1,4 @@
-import 'package:store_challenge/core/data/network/network_config.dart';
+import 'package:LaithStore/core/data/network/network_config.dart';
 
 class CategoryEndpoint {
   static String allCategories = NetworkConfig.getFullApiRoute('categories');

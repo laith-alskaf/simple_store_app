@@ -1,5 +1,5 @@
-import 'package:store_challenge/core/enums/request_type.dart';
-import 'package:store_challenge/core/utilis/network_utilis.dart';
+import 'package:LaithStore/core/enums/request_type.dart';
+import 'package:LaithStore/core/utilis/network_utilis.dart';
 
 class NetworkConfig {
   static String BASE_API = '/products/';

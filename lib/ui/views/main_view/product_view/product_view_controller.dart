@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:store_challenge/core/data/models/all_products_model.dart';
-import 'package:store_challenge/core/data/repositories/all_products_repositories.dart';
-import 'package:store_challenge/core/enums/message_type.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_showtoast.dart';
+import 'package:LaithStore/core/data/models/all_products_model.dart';
+import 'package:LaithStore/core/data/repositories/all_products_repositories.dart';
+import 'package:LaithStore/core/enums/message_type.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_showtoast.dart';
 
 class ProductViewController extends GetxController{
   RxList<AllProductsModel> allProducts=<AllProductsModel>[].obs;

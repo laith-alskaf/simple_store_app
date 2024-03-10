@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/core/data/models/all_products_model.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/extenssions/extenssions.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
-import 'package:store_challenge/ui/views/main_view/product_details_view/product_details_view.dart';
+import 'package:LaithStore/core/data/models/all_products_model.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/extenssions/extenssions.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
+import 'package:LaithStore/ui/views/main_view/product_details_view/product_details_view.dart';
 
 class CustomGrid extends StatelessWidget {
   CustomGrid({super.key, required this.allProducts, required this.index});

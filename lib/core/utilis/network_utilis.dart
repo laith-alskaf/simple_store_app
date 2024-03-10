@@ -1,8 +1,6 @@
 import 'dart:convert';
-import 'package:store_challenge/core/enums/request_type.dart';
-import 'package:store_challenge/core/enums/request_type_multipart.dart';
+import 'package:LaithStore/core/enums/request_type.dart';
 import 'package:http/http.dart' as http;
-import 'package:path/path.dart' as path;
 
 class NetworkUtil {
   static String baseUrl = "fakestoreapi.com";

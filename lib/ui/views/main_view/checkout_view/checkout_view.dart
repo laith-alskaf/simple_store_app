@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/core/utilis/general_util.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_button.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_price.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
-import 'package:store_challenge/ui/views/main_view/main_view.dart';
+import 'package:LaithStore/core/utilis/general_util.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_button.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_price.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
+import 'package:LaithStore/ui/views/main_view/main_view.dart';
 
 class CheckoutView extends StatelessWidget {
   const CheckoutView({super.key});

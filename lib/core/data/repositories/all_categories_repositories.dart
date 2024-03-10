@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:store_challenge/core/data/models/common_response.dart';
-import 'package:store_challenge/core/data/network/endpoints/category_endpoint.dart';
-import 'package:store_challenge/core/data/network/network_config.dart';
-import 'package:store_challenge/core/enums/request_type.dart';
-import 'package:store_challenge/core/utilis/network_utilis.dart';
+import 'package:LaithStore/core/data/models/common_response.dart';
+import 'package:LaithStore/core/data/network/endpoints/category_endpoint.dart';
+import 'package:LaithStore/core/data/network/network_config.dart';
+import 'package:LaithStore/core/enums/request_type.dart';
+import 'package:LaithStore/core/utilis/network_utilis.dart';
 
 class AllCategoryRepositories {
   static Future<Either<String, List<String>>> allCategory() async {

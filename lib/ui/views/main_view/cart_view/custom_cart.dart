@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/core/data/models/card_model.dart';
-import 'package:store_challenge/core/utilis/general_util.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_button.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_price.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/extenssions/extenssions.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
+import 'package:LaithStore/core/data/models/card_model.dart';
+import 'package:LaithStore/core/utilis/general_util.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_button.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_price.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/extenssions/extenssions.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
 
 class CustomCart extends StatelessWidget {
   const CustomCart({super.key, required this.cartList, required this.index});
@@ -73,6 +73,7 @@ class CustomCart extends StatelessWidget {
                       onTap: () {
                         cartServices
                             .removeFromCartList(cartList[index]);
+                        myAppController.numProdInCart.value=cartServices.getCartCount();
                       },
                       child: Icon(
                         Icons.disabled_by_default_rounded,
@@ -90,6 +91,7 @@ class CustomCart extends StatelessWidget {
                           heightSize: screenWidth(20),
                           onPressed: (){
                             cartServices.changeCount(incress: false, model: cartList[index]);
+                            myAppController.numProdInCart.value=cartServices.getCartCount();
                           },
                         ),
                         CustomText(
@@ -103,6 +105,8 @@ class CustomCart extends StatelessWidget {
                           heightSize: screenWidth(20),
                           onPressed: (){
                             cartServices.changeCount(incress: true, model: cartList[index]);
+                            myAppController.numProdInCart.value=cartServices.getCartCount();
+
                           },
                         )
                       ],

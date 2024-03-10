@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:store_challenge/core/data/models/all_products_model.dart';
+import 'package:LaithStore/core/data/models/all_products_model.dart';
 
 
 class CartModel {

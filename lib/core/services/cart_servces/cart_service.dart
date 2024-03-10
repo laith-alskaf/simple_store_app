@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:store_challenge/core/data/models/all_products_model.dart';
-import 'package:store_challenge/core/data/models/card_model.dart';
-import 'package:store_challenge/core/utilis/general_util.dart';
+import 'package:LaithStore/core/data/models/all_products_model.dart';
+import 'package:LaithStore/core/data/models/card_model.dart';
+import 'package:LaithStore/core/utilis/general_util.dart';
 
 class CartServices {
   RxList<CartModel> cartList = storage.getCartList().obs;

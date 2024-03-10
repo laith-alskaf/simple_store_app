@@ -1,8 +1,7 @@
-import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:store_challenge/core/data/models/card_model.dart';
-import 'package:store_challenge/core/enums/data_type.dart';
+import 'package:LaithStore/core/data/models/card_model.dart';
+import 'package:LaithStore/core/enums/data_type.dart';
 
 class SharedPreferenceRepositories {
   static SharedPreferences globalSharedPreferences = Get.find();

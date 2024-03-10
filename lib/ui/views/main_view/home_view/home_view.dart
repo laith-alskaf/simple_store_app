@@ -1,13 +1,13 @@
+import 'package:LaithStore/core/utilis/general_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/ui/shared/colors.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_button.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_grid.dart';
-import 'package:store_challenge/ui/shared/custom_widgets/custom_text.dart';
-import 'package:store_challenge/ui/shared/extenssions/extenssions.dart';
-import 'package:store_challenge/ui/shared/utils.dart';
-import 'package:store_challenge/ui/views/main_view/home_view/home_view_controller.dart';
+import 'package:LaithStore/ui/shared/colors.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_button.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_grid.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
+import 'package:LaithStore/ui/shared/extenssions/extenssions.dart';
+import 'package:LaithStore/ui/shared/utils.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -17,8 +17,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  HomeViewController controller = Get.put(HomeViewController());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
               fontWeight: FontWeight.bold,
             ),
             Obx(
-              () => controller.allCategory.length == 1
+              () => homeController.allCategory.length == 1
                   ? Center(
                       child: SpinKitCircle(
                         size: screenWidth(5),
@@ -48,32 +46,33 @@ class _HomeViewState extends State<HomeView> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                           children: List.generate(
-                              controller.allCategory.length, (index) {
+                              homeController.allCategory.length, (index) {
                         final textLength =
-                            controller.allCategory[index].length;
+                            homeController.allCategory[index].length;
                         final buttonWidth =
                             (textLength * (width * 0.03)) + width * 0.02;
                         return Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: screenWidth(30)),
+                          padding:
+                              EdgeInsets.symmetric(horizontal: screenWidth(30)),
                           child: CustomButton(
                             widthSize: buttonWidth > width * 0.15
                                 ? buttonWidth
                                 : width * 0.19,
                             backgroundColor:
-                                controller.selectedNum.value == index
-                                    ? controller.clickButton.value
+                                homeController.selectedNum.value == index
+                                    ? homeController.clickButton.value
                                     : AppColors.mainWhite,
-                            borderColor: controller.selectedNum.value == index
-                                ? AppColors.mainWhite
-                                : AppColors.mainBorder,
-                            text: controller.allCategory[index],
-                            textColor: controller.selectedNum.value == index
+                            borderColor:
+                                homeController.selectedNum.value == index
+                                    ? AppColors.mainWhite
+                                    : AppColors.mainBorder,
+                            text: homeController.allCategory[index],
+                            textColor: homeController.selectedNum.value == index
                                 ? AppColors.mainWhite
                                 : AppColors.mainBlack,
                             onPressed: () {
-                              controller.changeBackground(
-                                  index, controller.allCategory[index]);
+                              homeController.changeBackground(
+                                  index, homeController.allCategory[index]);
                             },
                           ),
                         );
@@ -91,7 +90,7 @@ class _HomeViewState extends State<HomeView> {
               fontWeight: FontWeight.bold,
             ),
             (screenWidth(90)).sbh,
-            Obx(() => controller.allProducts.isEmpty
+            Obx(() => homeController.allProducts.isEmpty
                 ? Center(
                     child: SpinKitCircle(
                     color: AppColors.mainblue1,
@@ -100,10 +99,10 @@ class _HomeViewState extends State<HomeView> {
                 : Wrap(
                     alignment: WrapAlignment.spaceEvenly,
                     runSpacing: screenHieght(20),
-                    children:
-                        List.generate(controller.allProducts.length, (index) {
+                    children: List.generate(homeController.allProducts.length,
+                        (index) {
                       return CustomGrid(
-                        allProducts: controller.allProducts,
+                        allProducts: homeController.allProducts,
                         index: index,
                       );
                     }),

@@ -1,6 +1,9 @@
+import 'package:LaithStore/core/utilis/general_util.dart';
+import 'package:LaithStore/ui/shared/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:store_challenge/core/enums/bottom_navigation.dart';
+import 'package:LaithStore/core/enums/bottom_navigation.dart';
+import 'package:get/get.dart';
 import '../../../shared/colors.dart';
 import '../../../shared/utils.dart';
 
@@ -58,14 +61,38 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
                     widget.onTap(BottomNavigationEnum.HOMEVIEW, 1);
                   },
                 ),
-                navItem(
-                  imageName: 'cart',
-                  isSelected: widget.bottomNavigationEnum ==
-                      BottomNavigationEnum.CARTVIEW,
-                  onTap: () {
-                    widget.onTap(BottomNavigationEnum.CARTVIEW, 2);
-                  },
-                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      child: navItem(
+                        imageName: 'cart',
+                        isSelected: widget.bottomNavigationEnum ==
+                            BottomNavigationEnum.CARTVIEW,
+                        onTap: () {
+                          widget.onTap(BottomNavigationEnum.CARTVIEW, 2);
+                        },
+                      ),
+                    ),
+                    Obx(() => myAppController.numProdInCart != 0
+                        ? Positioned(
+                            right: screenWidth(280),
+                            bottom: screenWidth(20),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: AppColors.redColor,
+                                  borderRadius:
+                                      BorderRadius.circular(screenWidth(10))),
+                              padding: EdgeInsets.all(screenWidth(280)),
+                              child: CustomText(
+                                text: "${myAppController.numProdInCart}",
+                                textcolor: AppColors.mainWhite,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        : const SizedBox())
+                  ],
+                )
               ],
             ),
           ),
@@ -83,18 +110,14 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
       onTap: () {
         onTap();
       },
-      child: Column(
-        children: [
-          SizedBox(
-            width: width * 0.1,
-            height: height * 0.042,
-            child: SvgPicture.asset(
-              'assets/images/$imageName.svg',
-              color:isSelected?AppColors.mainblue1: AppColors.mainBlack,
-              width:screenWidth(1),
-            ),
-          ),
-        ],
+      child: SizedBox(
+        width: width * 0.1,
+        height: height * 0.042,
+        child: SvgPicture.asset(
+          'assets/images/$imageName.svg',
+          color: isSelected ? AppColors.mainblue1 : AppColors.mainBlack,
+          width: screenWidth(1),
+        ),
       ),
     );
   }

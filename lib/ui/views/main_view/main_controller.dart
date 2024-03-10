@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_challenge/core/enums/bottom_navigation.dart';
+import 'package:LaithStore/core/enums/bottom_navigation.dart';
 
 class MainController extends GetxController {
   final scaffoldKey = GlobalKey<ScaffoldState>();
