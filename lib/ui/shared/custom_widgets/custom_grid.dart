@@ -22,10 +22,10 @@ class CustomGrid extends StatelessWidget {
         },
         child: Container(
           constraints: BoxConstraints(
-            minHeight: screenHieght(3),
+            minHeight: screenHieght(7),
             maxWidth: screenWidth(2.2),
             minWidth: screenWidth(2.2),
-            maxHeight: screenHieght(2.2),
+            maxHeight: screenHieght(2.6),
           ),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(screenWidth(30))),
@@ -88,7 +88,7 @@ class CustomGrid extends StatelessWidget {
               Row(
                 children: [
                   CustomText(
-                    text: ' :Price',
+                    text: 'Price : ',
                     fontWeight: FontWeight.bold,
                     leftPadding: screenWidth(27),
                     textcolor: AppColors.mainblue1,

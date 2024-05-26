@@ -43,20 +43,23 @@ class CustomCart extends StatelessWidget {
                     children: [
                       (screenWidth(10)).sbh,
                       CustomText(
-                        text: cartList[index].product!.title
-                            .toString(),
+                        text: cartList[index].product!.title.toString(),
                         textcolor: AppColors.mainBlack,
                       ),
                       (screenWidth(30)).sbh,
                       CustomPrice(
-                          text1: ' :Price',showSP: false,
-                          text2: cartList[index].product!.price!
+                          text1: 'Price : ',
+                          showSP: false,
+                          text2: cartList[index]
+                              .product!
+                              .price!
                               .toStringAsFixed(2),
                           sbw: 20,
                           horizontal: 50),
                       (screenWidth(40)).sbh,
-                      CustomPrice(showSP: false,
-                        text1: ' :total',
+                      CustomPrice(
+                        showSP: false,
+                        text1: 'total : ',
                         text2: cartList[index].total!.toStringAsFixed(2),
                         sbw: 20,
                         horizontal: 50,
@@ -71,9 +74,9 @@ class CustomCart extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        cartServices
-                            .removeFromCartList(cartList[index]);
-                        myAppController.numProdInCart.value=cartServices.getCartCount();
+                        cartServices.removeFromCartList(cartList[index]);
+                        myAppController.numProdInCart.value =
+                            cartServices.getCartCount();
                       },
                       child: Icon(
                         Icons.disabled_by_default_rounded,
@@ -83,34 +86,61 @@ class CustomCart extends StatelessWidget {
                     (screenWidth(5)).sbh,
                     Row(
                       children: [
-                        CustomButton(
-                          text: '-',
-                          isCircle: true,
-                          textColor: AppColors.mainWhite,
-                          widthSize: screenWidth(10),
-                          heightSize: screenWidth(20),
-                          onPressed: (){
-                            cartServices.changeCount(incress: false, model: cartList[index]);
-                            myAppController.numProdInCart.value=cartServices.getCartCount();
+                        GestureDetector(
+                          onTap: () {
+                            cartServices.changeCount(
+                                incress: false, model: cartList[index]);
+                            myAppController.numProdInCart.value =
+                                cartServices.getCartCount();
                           },
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: screenWidth(20),
+                            height: screenWidth(20),
+                            decoration: BoxDecoration(
+                                color: AppColors.mainPurple1,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(100))),
+                            child: CustomText(
+                              text: '-',
+                              textcolor: AppColors.mainWhite,
+                              fontsize: screenWidth(25),
+                            ),
+                          ),
                         ),
                         CustomText(
-                          text: cartServices.getCartModel(cartList[index].product!)!.count.toString(),
+                          leftPadding: screenWidth(80),
+                          rightPadding: screenWidth(80),
+                          text: cartServices
+                              .getCartModel(cartList[index].product!)!
+                              .count
+                              .toString(),
                         ),
-                        CustomButton(
-                          text: '+',
-                          isCircle: true,
-                          textColor: AppColors.mainWhite,
-                          widthSize: screenWidth(10),
-                          heightSize: screenWidth(20),
-                          onPressed: (){
-                            cartServices.changeCount(incress: true, model: cartList[index]);
-                            myAppController.numProdInCart.value=cartServices.getCartCount();
-
+                        GestureDetector(
+                          onTap: () {
+                            cartServices.changeCount(
+                                incress: true, model: cartList[index]);
+                            myAppController.numProdInCart.value =
+                                cartServices.getCartCount();
                           },
-                        )
+                          child: Container(
+                            margin: EdgeInsets.only(right: screenWidth(45)),
+                            alignment: Alignment.center,
+                            width: screenWidth(20),
+                            height: screenWidth(20),
+                            decoration: BoxDecoration(
+                                color: AppColors.mainPurple1,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(100))),
+                            child: CustomText(
+                              text: '+',
+                              textcolor: AppColors.mainWhite,
+                              fontsize: screenWidth(25),
+                            ),
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 )
               ],

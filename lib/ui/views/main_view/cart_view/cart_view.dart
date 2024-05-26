@@ -70,23 +70,23 @@ class _CartViewState extends State<CartView> {
                     indent: screenWidth(19),
                     color: AppColors.mainblue1),
                 CustomPrice(
-                  text1: ':Sub Total',
+                  text1: 'Sub Total : ',
                   isSpacer: true,
                   text2: cartServices.subTotal.toStringAsFixed(3),
                   moreDivider: true,
                 ),
                 CustomPrice(
-                    text1: ':Tax',
+                    text1: 'Tax : ',
                     isSpacer: true,
                     text2: cartServices.tax.toStringAsFixed(3),
                     moreDivider: true),
                 CustomPrice(
-                    text1: ':Delivery Fees',
+                    text1: 'Delivery Fees : ',
                     isSpacer: true,
                     text2: cartServices.deliverFees.toStringAsFixed(3),
                     moreDivider: true),
                 CustomPrice(
-                  text1: ':Total',
+                  text1: 'Total : ',
                   isSpacer: true,
                   text2: cartServices.total.toStringAsFixed(4),
                   text1Color: AppColors.redColor,

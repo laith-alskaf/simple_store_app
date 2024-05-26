@@ -15,36 +15,39 @@ class ProductView extends StatelessWidget {
   Widget build(BuildContext context) {
     ProductViewController controller = Get.put(ProductViewController());
     return Scaffold(
-      body: ListView( shrinkWrap: true,
-        physics: const BouncingScrollPhysics(),
-        children: [
-          CustomText(
-            text: 'All Products',
-            fontsize:screenWidth(10),
-            rightPadding: screenWidth(2.5),
-            topPadding: screenWidth(15),
-            bottomPadding: screenWidth(10),
-            textcolor: AppColors.mainBlack,
-            fontWeight: FontWeight.bold,
-          ),
-          (screenWidth(10)).sbh,
-          Obx(() => controller.allProducts.isEmpty
-              ? Center(
-              child: SpinKitCircle(
-                color: AppColors.mainblue1,
-                size: screenWidth(5),
-              ))
-              : Wrap(
-            alignment: WrapAlignment.spaceEvenly,
-            runSpacing: screenHieght(20),
-            children: List.generate(controller.allProducts.length, (index) {
-              return CustomGrid(
-                allProducts: controller.allProducts,
-                index: index,
-              );
-            }),
-          ))
-      ],)
-    );
+        backgroundColor: Colors.white,
+        body: ListView(
+          shrinkWrap: true,
+          physics: const BouncingScrollPhysics(),
+          children: [
+            CustomText(
+              text: 'All Products',
+              fontsize: screenWidth(10),
+              rightPadding: screenWidth(2.5),
+              topPadding: screenWidth(15),
+              bottomPadding: screenWidth(10),
+              textcolor: AppColors.mainBlack,
+              fontWeight: FontWeight.bold,
+            ),
+            (screenWidth(10)).sbh,
+            Obx(() => controller.allProducts.isEmpty
+                ? Center(
+                    child: SpinKitCircle(
+                    color: AppColors.mainblue1,
+                    size: screenWidth(5),
+                  ))
+                : Wrap(
+                    alignment: WrapAlignment.spaceEvenly,
+                    runSpacing: screenHieght(20),
+                    children:
+                        List.generate(controller.allProducts.length, (index) {
+                      return CustomGrid(
+                        allProducts: controller.allProducts,
+                        index: index,
+                      );
+                    }),
+                  ))
+          ],
+        ));
   }
 }

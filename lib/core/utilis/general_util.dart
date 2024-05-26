@@ -1,7 +1,7 @@
+import 'package:LaithStore/core/utilis/network_utilis.dart';
 import 'package:get/get.dart';
 import 'package:LaithStore/core/data/repositories/shared_preference_repositories.dart';
 import 'package:LaithStore/core/services/cart_servces/cart_service.dart';
-import 'package:LaithStore/core/utilis/network_utilis.dart';
 import '../../app/my_app_controller.dart';
 import '../../ui/views/main_view/home_view/home_view_controller.dart';
 
